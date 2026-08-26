@@ -9,6 +9,8 @@ import { LocationSection } from "@/components/site/Location";
 import { FinalCTA } from "@/components/site/FinalCTA";
 import { Footer } from "@/components/site/Footer";
 import { MobileActionBar } from "@/components/site/MobileActionBar";
+import { BookingModal } from "@/components/site/BookingModal";
+import { InstallBanner } from "@/components/site/InstallBanner";
 import { business, services } from "@/data/site";
 
 const title = "AutoHerb Ongole | Premium Car Detailing & Ceramic Coating";
