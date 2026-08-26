@@ -1,6 +1,7 @@
-import { Car, MessageCircle, Phone } from "lucide-react";
+import { Car, MessageCircle, Phone, CalendarCheck } from "lucide-react";
 import { business, waLink } from "@/data/site";
 import { Reveal } from "./Reveal";
+import { openBooking } from "./BookingModal";
 
 export function FinalCTA() {
   return (
@@ -34,6 +35,14 @@ export function FinalCTA() {
                 <Phone className="h-4 w-4" aria-hidden />
                 Call Now
               </a>
+              <button
+                type="button"
+                onClick={openBooking}
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-primary-foreground/40 px-6 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+              >
+                <CalendarCheck className="h-4 w-4" aria-hidden />
+                Book Now
+              </button>
             </div>
           </div>
         </Reveal>
