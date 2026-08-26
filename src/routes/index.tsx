@@ -97,6 +97,8 @@ function Index() {
       </main>
       <Footer />
       <MobileActionBar />
+      <BookingModal />
+      <InstallBanner />
       <span className="sr-only">{business.name}</span>
     </div>
   );
