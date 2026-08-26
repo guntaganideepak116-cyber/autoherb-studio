@@ -65,7 +65,6 @@ export function BookingModal() {
 
   useEffect(() => {
     const onOpen = () => setOpen(true);
-    console.log("[booking] listener ready");
     window.addEventListener(BOOKING_EVENT, onOpen);
     return () => window.removeEventListener(BOOKING_EVENT, onOpen);
   }, []);
