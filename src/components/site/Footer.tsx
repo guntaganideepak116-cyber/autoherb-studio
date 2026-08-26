@@ -25,6 +25,26 @@ export function Footer() {
         <div>
           <Logo />
           <p className="mt-4 text-sm text-muted-foreground">{business.tagline}</p>
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href={business.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AutoHerb Ongole on Instagram"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-gold transition-colors hover:border-gold hover:bg-surface"
+            >
+              <Instagram className="h-4 w-4" aria-hidden />
+            </a>
+            <a
+              href={waLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="AutoHerb Ongole on WhatsApp"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-gold transition-colors hover:border-gold hover:bg-surface"
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden />
+            </a>
+          </div>
         </div>
 
         <nav aria-label="Quick links">
@@ -92,6 +112,17 @@ export function Footer() {
               >
                 <MessageCircle className="h-4 w-4 text-gold" aria-hidden />
                 Book on WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href={business.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 transition-colors hover:text-gold"
+              >
+                <Instagram className="h-4 w-4 text-gold" aria-hidden />
+                Follow on Instagram
               </a>
             </li>
           </ul>
