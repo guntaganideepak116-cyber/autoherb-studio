@@ -1,5 +1,6 @@
 import { Phone, MessageCircle, CalendarCheck } from "lucide-react";
 import { business, waLink } from "@/data/site";
+import { openBooking } from "./BookingModal";
 
 export function MobileActionBar() {
   return (
@@ -7,7 +8,8 @@ export function MobileActionBar() {
       <div className="grid grid-cols-3 gap-2 px-3 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
         <a
           href={business.phoneHref}
-          className="flex h-12 flex-col items-center justify-center rounded-lg border border-border text-[0.65rem] font-semibold tracking-wide text-foreground"
+          aria-label="Call AutoHerb Ongole"
+          className="flex h-12 flex-col items-center justify-center rounded-lg border border-border text-[0.65rem] font-semibold tracking-wide text-foreground transition-colors active:border-gold active:text-gold"
         >
           <Phone className="h-4 w-4 text-gold" aria-hidden />
           CALL
@@ -16,20 +18,21 @@ export function MobileActionBar() {
           href={waLink()}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-12 flex-col items-center justify-center rounded-lg border border-border text-[0.65rem] font-semibold tracking-wide text-foreground"
+          aria-label="Chat with AutoHerb Ongole on WhatsApp"
+          className="flex h-12 flex-col items-center justify-center rounded-lg border border-border text-[0.65rem] font-semibold tracking-wide text-foreground transition-colors active:border-gold active:text-gold"
         >
           <MessageCircle className="h-4 w-4 text-gold" aria-hidden />
           WHATSAPP
         </a>
-        <a
-          href={waLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex h-12 flex-col items-center justify-center rounded-lg bg-[image:var(--gradient-gold)] text-[0.65rem] font-semibold tracking-wide text-primary-foreground"
+        <button
+          type="button"
+          onClick={openBooking}
+          aria-label="Open the booking form"
+          className="flex h-12 flex-col items-center justify-center rounded-lg bg-[image:var(--gradient-gold)] text-[0.65rem] font-semibold tracking-wide text-primary-foreground transition-opacity active:opacity-90"
         >
           <CalendarCheck className="h-4 w-4" aria-hidden />
           BOOK NOW
-        </a>
+        </button>
       </div>
     </div>
   );
