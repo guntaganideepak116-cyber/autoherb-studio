@@ -1,15 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { business, waLink } from "@/data/site";
 import { cn } from "@/lib/utils";
 
-const nav = [
+const primaryNav = [
   { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Our Work", href: "#work" },
+];
+
+const menuNav = [
   { label: "Reviews", href: "#reviews" },
   { label: "Location", href: "#location" },
+  { label: "Apply Jobs", href: "#jobs" },
 ];
+
+const nav = [...primaryNav, ...menuNav];
+
 
 export function Logo({ className }: { className?: string }) {
   return (
