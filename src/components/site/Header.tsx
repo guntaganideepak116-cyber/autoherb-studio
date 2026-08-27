@@ -1,15 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { business, waLink } from "@/data/site";
 import { cn } from "@/lib/utils";
 
-const nav = [
+const primaryNav = [
   { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Our Work", href: "#work" },
+];
+
+const menuNav = [
   { label: "Reviews", href: "#reviews" },
   { label: "Location", href: "#location" },
+  { label: "Apply Jobs", href: "#jobs" },
 ];
+
+const nav = [...primaryNav, ...menuNav];
+
 
 export function Logo({ className }: { className?: string }) {
   return (
@@ -24,7 +32,9 @@ export function Logo({ className }: { className?: string }) {
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [deskOpen, setDeskOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const deskRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -40,6 +50,20 @@ export function Header() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!deskOpen) return;
+    const onDown = (e: MouseEvent) => {
+      if (!deskRef.current?.contains(e.target as Node)) setDeskOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setDeskOpen(false);
+    window.addEventListener("mousedown", onDown);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("mousedown", onDown);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [deskOpen]);
+
   return (
     <header
       className={cn(
@@ -54,12 +78,12 @@ export function Header() {
           <Logo />
         </a>
 
-        <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
-          {nav.map((n) => (
+        <nav aria-label="Main" className="hidden min-w-0 items-center gap-6 lg:flex xl:gap-7">
+          {primaryNav.map((n) => (
             <a
               key={n.href}
               href={n.href}
-              className="text-sm font-medium text-foreground/85 transition-colors hover:text-gold"
+              className="whitespace-nowrap text-sm font-medium text-foreground/85 transition-colors hover:text-gold"
             >
               {n.label}
             </a>
@@ -71,18 +95,53 @@ export function Header() {
             href={waLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            className="inline-flex h-11 items-center gap-2 whitespace-nowrap rounded-full bg-[image:var(--gradient-gold)] px-5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             <MessageCircle className="h-4 w-4" aria-hidden />
             Book on WhatsApp
           </a>
           <a
             href={business.phoneHref}
-            className="inline-flex h-11 items-center gap-2 rounded-full border border-border px-4 text-sm font-medium text-foreground transition-colors hover:border-gold hover:text-gold"
+            className="hidden h-11 items-center gap-2 whitespace-nowrap rounded-full border border-border px-4 text-sm font-medium text-foreground transition-colors hover:border-gold hover:text-gold xl:inline-flex"
           >
             <Phone className="h-4 w-4 text-gold" aria-hidden />
             {business.phoneDisplay}
           </a>
+
+          <div className="relative" ref={deskRef}>
+            <button
+              type="button"
+              onClick={() => setDeskOpen((v) => !v)}
+              aria-expanded={deskOpen}
+              aria-controls="desktop-menu"
+              aria-label={deskOpen ? "Close more menu" : "Open more menu"}
+              className={cn(
+                "inline-flex h-11 w-11 items-center justify-center rounded-full border text-foreground transition-colors",
+                deskOpen ? "border-gold text-gold" : "border-border hover:border-gold hover:text-gold",
+              )}
+            >
+              {deskOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+
+            {deskOpen && (
+              <nav
+                id="desktop-menu"
+                aria-label="More"
+                className="absolute right-0 top-[calc(100%+0.6rem)] w-52 overflow-hidden rounded-2xl border border-gold/25 bg-background/97 p-1.5 shadow-[var(--shadow-gold)] backdrop-blur-xl"
+              >
+                {menuNav.map((n) => (
+                  <a
+                    key={n.href}
+                    href={n.href}
+                    onClick={() => setDeskOpen(false)}
+                    className="block rounded-xl px-4 py-2.5 text-sm font-medium text-foreground/90 transition-colors hover:bg-surface hover:text-gold"
+                  >
+                    {n.label}
+                  </a>
+                ))}
+              </nav>
+            )}
+          </div>
         </div>
 
         <button
@@ -100,7 +159,7 @@ export function Header() {
       {open && (
         <div
           id="mobile-menu"
-          className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background px-4 pb-8 pt-4 lg:hidden"
+          className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background px-4 pb-6 pt-2 lg:hidden"
         >
           <nav aria-label="Mobile" className="flex flex-col">
             {nav.map((n) => (
@@ -108,25 +167,25 @@ export function Header() {
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-4 text-base font-medium text-foreground transition-colors hover:text-gold"
+                className="border-b border-border/60 py-3 text-sm font-medium text-foreground transition-colors hover:text-gold"
               >
                 {n.label}
               </a>
             ))}
           </nav>
-          <div className="mt-6 flex flex-col gap-3">
+          <div className="mt-4 flex flex-col gap-2.5 pb-[env(safe-area-inset-bottom)]">
             <a
               href={waLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] text-sm font-semibold text-primary-foreground"
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] text-sm font-semibold text-primary-foreground"
             >
               <MessageCircle className="h-4 w-4" aria-hidden />
               Book on WhatsApp
             </a>
             <a
               href={business.phoneHref}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-gold/60 text-sm font-semibold text-gold"
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-gold/60 text-sm font-semibold text-gold"
             >
               <Phone className="h-4 w-4" aria-hidden />
               Call Now
@@ -136,4 +195,5 @@ export function Header() {
       )}
     </header>
   );
+
 }
