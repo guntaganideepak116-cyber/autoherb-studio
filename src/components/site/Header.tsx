@@ -1,23 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { business, waLink } from "@/data/site";
 import { cn } from "@/lib/utils";
 
-const primaryNav = [
+const nav = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Our Work", href: "#work" },
-];
-
-const menuNav = [
   { label: "Reviews", href: "#reviews" },
   { label: "Location", href: "#location" },
   { label: "Apply Jobs", href: "#jobs" },
 ];
-
-const nav = [...primaryNav, ...menuNav];
-
 
 export function Logo({ className }: { className?: string }) {
   return (
@@ -32,9 +26,7 @@ export function Logo({ className }: { className?: string }) {
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [deskOpen, setDeskOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const deskRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -50,20 +42,6 @@ export function Header() {
     };
   }, [open]);
 
-  useEffect(() => {
-    if (!deskOpen) return;
-    const onDown = (e: MouseEvent) => {
-      if (!deskRef.current?.contains(e.target as Node)) setDeskOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setDeskOpen(false);
-    window.addEventListener("mousedown", onDown);
-    window.addEventListener("keydown", onKey);
-    return () => {
-      window.removeEventListener("mousedown", onDown);
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [deskOpen]);
-
   return (
     <header
       className={cn(
@@ -78,12 +56,12 @@ export function Header() {
           <Logo />
         </a>
 
-        <nav aria-label="Main" className="hidden min-w-0 items-center gap-6 lg:flex xl:gap-7">
-          {primaryNav.map((n) => (
+        <nav aria-label="Main" className="hidden min-w-0 items-center gap-4 lg:flex xl:gap-6">
+          {nav.map((n) => (
             <a
               key={n.href}
               href={n.href}
-              className="whitespace-nowrap text-sm font-medium text-foreground/85 transition-colors hover:text-gold"
+              className="whitespace-nowrap text-xs font-medium text-foreground/85 transition-colors hover:text-gold xl:text-sm"
             >
               {n.label}
             </a>
@@ -107,41 +85,6 @@ export function Header() {
             <Phone className="h-4 w-4 text-gold" aria-hidden />
             {business.phoneDisplay}
           </a>
-
-          <div className="relative" ref={deskRef}>
-            <button
-              type="button"
-              onClick={() => setDeskOpen((v) => !v)}
-              aria-expanded={deskOpen}
-              aria-controls="desktop-menu"
-              aria-label={deskOpen ? "Close more menu" : "Open more menu"}
-              className={cn(
-                "inline-flex h-11 w-11 items-center justify-center rounded-full border text-foreground transition-colors",
-                deskOpen ? "border-gold text-gold" : "border-border hover:border-gold hover:text-gold",
-              )}
-            >
-              {deskOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-
-            {deskOpen && (
-              <nav
-                id="desktop-menu"
-                aria-label="More"
-                className="absolute right-0 top-[calc(100%+0.6rem)] w-52 overflow-hidden rounded-2xl border border-gold/25 bg-background/97 p-1.5 shadow-[var(--shadow-gold)] backdrop-blur-xl"
-              >
-                {menuNav.map((n) => (
-                  <a
-                    key={n.href}
-                    href={n.href}
-                    onClick={() => setDeskOpen(false)}
-                    className="block rounded-xl px-4 py-2.5 text-sm font-medium text-foreground/90 transition-colors hover:bg-surface hover:text-gold"
-                  >
-                    {n.label}
-                  </a>
-                ))}
-              </nav>
-            )}
-          </div>
         </div>
 
         <button
@@ -195,5 +138,4 @@ export function Header() {
       )}
     </header>
   );
-
 }
