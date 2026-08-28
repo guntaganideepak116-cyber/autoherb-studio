@@ -11,6 +11,9 @@ import { Footer } from "@/components/site/Footer";
 import { MobileActionBar } from "@/components/site/MobileActionBar";
 import { BookingModal } from "@/components/site/BookingModal";
 import { InstallBanner } from "@/components/site/InstallBanner";
+import { AboutSection } from "@/components/site/About";
+import { JobsSection } from "@/components/site/Jobs";
+import { JobApplicationModal } from "@/components/site/JobApplicationModal";
 import { business, services } from "@/data/site";
 
 const title = "AutoHerb Ongole | Premium Car Detailing & Ceramic Coating";
@@ -89,15 +92,18 @@ function Index() {
       <main>
         <Hero />
         <TrustStats />
+        <AboutSection />
         <ServicesSection />
         <BeforeAfterSection />
         <ReviewsCarousel />
         <LocationSection />
+        <JobsSection />
         <FinalCTA />
       </main>
       <Footer />
       <MobileActionBar />
       <BookingModal />
+      <JobApplicationModal />
       <InstallBanner />
       <span className="sr-only">{business.name}</span>
     </div>

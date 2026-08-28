@@ -4,10 +4,12 @@ import { Logo } from "./Header";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Our Work", href: "#work" },
   { label: "Reviews", href: "#reviews" },
   { label: "Location", href: "#location" },
+  { label: "Apply Jobs", href: "#jobs" },
 ];
 
 const serviceLinks = [
