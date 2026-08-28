@@ -15,7 +15,8 @@ export const business = {
   phoneDisplay: "90321 17101",
   phoneHref: "tel:+919032117101",
   whatsappBase: "https://wa.me/919032117101",
-  whatsapp: "https://wa.me/919032117101?text=Hi%20AutoHerb%20Ongole%2C%20I%27d%20like%20to%20book%20a%20detailing%20service.",
+  whatsapp:
+    "https://wa.me/919032117101?text=Hi%20AutoHerb%20Ongole%2C%20I%27d%20like%20to%20book%20a%20detailing%20service.",
   // Update this if the official profile handle differs.
   instagram: "https://www.instagram.com/autoherb_ongole/",
   addressLines: [
@@ -44,7 +45,17 @@ export type Service = {
   name: string;
   short: string;
   image: string;
-  icon: "gem" | "shield" | "sparkles" | "droplets" | "sun" | "cog" | "shieldcheck" | "lightbulb" | "bike" | "armchair";
+  icon:
+    | "gem"
+    | "shield"
+    | "sparkles"
+    | "droplets"
+    | "sun"
+    | "cog"
+    | "shieldcheck"
+    | "lightbulb"
+    | "bike"
+    | "armchair";
   description: string;
   benefits: string[];
   suitableFor: string;

@@ -18,13 +18,15 @@ The final website must closely reproduce the exact black + premium gold AutoHerb
 The reference design is the source of truth.
 
 ==================================================
+
 1. BRAND / VISUAL IDENTITY
-==================================================
+   \==================================================
 
 Brand:
 AUTOHERB ONGOLE
 
 Style:
+
 - Premium automotive detailing studio
 - Luxury
 - Dark black background
@@ -38,6 +40,7 @@ Style:
 - Sophisticated but simple
 
 Primary visual colors:
+
 - Near-black / black background
 - Dark charcoal sections
 - Premium gold/yellow accents
@@ -50,8 +53,7 @@ Do NOT make the website look like a gaming website.
 
 The result should feel like a luxury automotive detailing brand.
 
-==================================================
-2. HEADER / NAVIGATION
+================================================== 2. HEADER / NAVIGATION
 ==================================================
 
 Create a premium fixed/sticky header matching the reference.
@@ -61,6 +63,7 @@ AUTOHERB
 ONGOLE
 
 Center/right navigation:
+
 - Home
 - Services
 - Our Work
@@ -68,6 +71,7 @@ Center/right navigation:
 - Location
 
 Right-side actions:
+
 - Book on WhatsApp
 - Phone number: 90321 17101
 
@@ -78,6 +82,7 @@ Mobile:
 Replace desktop navigation with a clean hamburger menu.
 
 Mobile menu should contain:
+
 - Home
 - Services
 - Our Work
@@ -88,8 +93,7 @@ Mobile menu should contain:
 
 Navigation must remain extremely simple to use.
 
-==================================================
-3. HERO SECTION
+================================================== 3. HERO SECTION
 ==================================================
 
 Reproduce the hero composition from the reference image.
@@ -111,6 +115,7 @@ Professional car detailing, ceramic coating,
 PPF and more – for a longer lasting shine.
 
 Feature highlights:
+
 - Ceramic Coating
 - PPF
 - Detailing
@@ -126,6 +131,7 @@ Location:
 Ongole, Andhra Pradesh
 
 The hero should visually match the reference:
+
 - Text on left
 - Vehicle imagery on right
 - Dark cinematic background
@@ -136,8 +142,7 @@ The hero should visually match the reference:
 On mobile:
 Stack the content elegantly while preserving the same visual hierarchy.
 
-==================================================
-4. TRUST / STATISTICS STRIP
+================================================== 4. TRUST / STATISTICS STRIP
 ==================================================
 
 Immediately below the hero, create the same premium statistics/trust strip from the reference.
@@ -160,8 +165,7 @@ Use elegant gold icons and thin separators.
 
 Keep this section compact and premium.
 
-==================================================
-5. SERVICES SECTION
+================================================== 5. SERVICES SECTION
 ==================================================
 
 Section heading:
@@ -178,6 +182,7 @@ IMPORTANT:
 The service cards must visually resemble the reference images.
 
 Each card should have:
+
 - Large automotive image
 - Dark overlay
 - Gold icon
@@ -190,34 +195,34 @@ Each card should have:
 Services:
 
 1. 9H CERAMIC COATING
-Protection that shines.
+   Protection that shines.
 
 2. PPF
-Paint protection film for vulnerable surfaces.
+   Paint protection film for vulnerable surfaces.
 
 3. FULL SPA
-Complete exterior & interior treatment.
+   Complete exterior & interior treatment.
 
 4. FOAM WASH
-Deep exterior cleaning and preparation.
+   Deep exterior cleaning and preparation.
 
 5. GLASS TREATMENT
-Improved clarity & surface protection.
+   Improved clarity & surface protection.
 
 6. ENGINE COATING
-Engine-bay cleaning and protective treatment.
+   Engine-bay cleaning and protective treatment.
 
 7. ANTI-RUST COATING
-Additional protection against corrosion.
+   Additional protection against corrosion.
 
 8. HEADLIGHT RESTORATION
-Restore clarity and appearance.
+   Restore clarity and appearance.
 
 9. BIKE DETAILING
-Professional detailing for two-wheelers.
+   Professional detailing for two-wheelers.
 
 10. INSIDE CLEANING
-Deep interior cleaning and treatment.
+    Deep interior cleaning and treatment.
 
 Desktop:
 Use the same 5-column × 2-row visual arrangement shown in the reference when screen width allows.
@@ -230,8 +235,7 @@ Use 1 column or a carefully optimized 2-column layout only if readability remain
 
 Do NOT make cards unnecessarily huge.
 
-==================================================
-6. SERVICE INTERACTION
+================================================== 6. SERVICE INTERACTION
 ==================================================
 
 Every service card must be clickable.
@@ -239,6 +243,7 @@ Every service card must be clickable.
 Clicking a service should open a premium service detail modal/page.
 
 Show:
+
 - Large service image
 - Service name
 - Description
@@ -254,8 +259,7 @@ Do NOT invent service prices.
 If prices are not provided, show:
 "Contact us for pricing"
 
-==================================================
-7. BEFORE / AFTER SECTION
+================================================== 7. BEFORE / AFTER SECTION
 ==================================================
 
 Create the transformation section exactly in the style of the reference.
@@ -280,14 +284,14 @@ Add:
 View More Work →
 
 The slider must work smoothly on:
+
 - Desktop
 - Tablet
 - Mobile
 
 This should be one of the visual highlights of the website.
 
-==================================================
-8. WHY CHOOSE AUTOHERB
+================================================== 8. WHY CHOOSE AUTOHERB
 ==================================================
 
 Create the "WHY CHOOSE AUTOHERB ONGOLE?" section from the reference.
@@ -310,8 +314,7 @@ Use gold line icons and minimal text.
 
 Maintain the exact dark premium aesthetic.
 
-==================================================
-9. REVIEWS SECTION
+================================================== 9. REVIEWS SECTION
 ==================================================
 
 Heading:
@@ -324,6 +327,7 @@ Display customer reviews in premium horizontal cards.
 Use a carousel/slider.
 
 Each review card should contain:
+
 - Quote
 - 5-star rating
 - Customer name
@@ -340,8 +344,7 @@ Previous / Next controls
 Mobile swipe support
 Pagination dots
 
-==================================================
-10. FINAL CTA
+================================================== 10. FINAL CTA
 ==================================================
 
 Create the large gold/black CTA section shown near the bottom.
@@ -364,8 +367,7 @@ WhatsApp should directly open a WhatsApp conversation.
 
 Phone button should directly initiate a call on mobile.
 
-==================================================
-11. FOOTER
+================================================== 11. FOOTER
 ==================================================
 
 Create a premium dark footer.
@@ -377,6 +379,7 @@ Text:
 Premium care. Unmatched finish.
 
 Quick Links:
+
 - Home
 - Services
 - Our Work
@@ -384,6 +387,7 @@ Quick Links:
 - Location
 
 Services:
+
 - Ceramic Coating
 - PPF
 - Full Car Spa
@@ -405,8 +409,7 @@ Include social icons only if actual social media accounts/URLs are provided.
 
 Footer should remain clean and compact.
 
-==================================================
-12. BUSINESS DETAILS
+================================================== 12. BUSINESS DETAILS
 ==================================================
 
 Use the following supplied business information:
@@ -435,6 +438,7 @@ Sunday:
 7:00 AM – 8:30 PM
 
 Services supplied for the website include:
+
 - Polishing
 - Car Window Cleaning
 - Pressure Car Washing
@@ -457,8 +461,7 @@ Services supplied for the website include:
 
 Organize these into the premium service categories/cards rather than displaying them as a boring plain list.
 
-==================================================
-13. LOCATION
+================================================== 13. LOCATION
 ==================================================
 
 Create a Location section.
@@ -473,14 +476,14 @@ Ongole,
 Andhra Pradesh 523001
 
 Add:
+
 - Get Directions
 - Call Now
 - WhatsApp
 
 Use Google Maps integration/link only if the official location URL is provided.
 
-==================================================
-14. MOBILE-FIRST EXPERIENCE
+================================================== 14. MOBILE-FIRST EXPERIENCE
 ==================================================
 
 THIS IS EXTREMELY IMPORTANT.
@@ -504,6 +507,7 @@ Test and optimize for:
 Mobile must NOT feel like a shrunken desktop website.
 
 Optimize:
+
 - Typography
 - Hero image
 - Navigation
@@ -521,6 +525,7 @@ Minimum comfortable touch target:
 44px.
 
 Prevent:
+
 - Horizontal scrolling
 - Text overflow
 - Broken images
@@ -528,8 +533,7 @@ Prevent:
 - Tiny buttons
 - Excessive animation
 
-==================================================
-15. MOBILE STICKY ACTION BAR
+================================================== 15. MOBILE STICKY ACTION BAR
 ==================================================
 
 On mobile, add a simple bottom action bar:
@@ -542,8 +546,7 @@ This should remain easy to access without covering important content.
 
 Use premium black + gold styling consistent with the reference.
 
-==================================================
-16. USER EXPERIENCE
+================================================== 16. USER EXPERIENCE
 ==================================================
 
 The website should be extremely simple for customers.
@@ -569,13 +572,13 @@ Landing page
 → Service
 → WhatsApp / Call
 
-==================================================
-17. ANIMATIONS
+================================================== 17. ANIMATIONS
 ==================================================
 
 Use subtle premium animations only.
 
 Examples:
+
 - Smooth fade-in
 - Gentle slide-up
 - Card hover elevation
@@ -596,13 +599,13 @@ NO excessive parallax.
 NO flashy effects.
 NO distracting particle backgrounds.
 
-==================================================
-18. IMAGE QUALITY
+================================================== 18. IMAGE QUALITY
 ==================================================
 
 Automotive imagery is extremely important.
 
 Images should look:
+
 - Photorealistic
 - Premium
 - Cinematic
@@ -618,13 +621,13 @@ Use appropriate image aspect ratios to prevent layout shifts.
 
 Add proper alt text.
 
-==================================================
-19. PERFORMANCE
+================================================== 19. PERFORMANCE
 ==================================================
 
 The website must be production-ready.
 
 Implement:
+
 - Next.js
 - TypeScript
 - Tailwind CSS
@@ -640,8 +643,7 @@ Implement:
 
 Avoid huge JavaScript bundles.
 
-==================================================
-20. SEO
+================================================== 20. SEO
 ==================================================
 
 Target local SEO around:
@@ -659,17 +661,18 @@ Page title:
 AutoHerb Ongole | Premium Car Detailing & Ceramic Coating
 
 Create:
+
 - Proper meta description
 - Open Graph metadata
 - LocalBusiness structured data
 - Service structured data where appropriate
 - Proper heading hierarchy
 
-==================================================
-21. ACCESSIBILITY
+================================================== 21. ACCESSIBILITY
 ==================================================
 
 Ensure:
+
 - WCAG-friendly contrast
 - Keyboard accessibility
 - Visible focus states
@@ -679,8 +682,7 @@ Ensure:
 - Accessible carousel controls
 - Accessible mobile navigation
 
-==================================================
-22. DESIGN ACCURACY — VERY IMPORTANT
+================================================== 22. DESIGN ACCURACY — VERY IMPORTANT
 ==================================================
 
 The attached reference images must be treated as the design specification.
@@ -707,6 +709,7 @@ Match as closely as possible:
 Do NOT reinterpret the design.
 
 Do NOT add:
+
 - Blog section
 - Pricing section unless requested
 - FAQ section unless requested
@@ -720,8 +723,7 @@ Do NOT add:
 Keep the experience focused on:
 DETAILING → TRUST → SERVICES → WORK → CONTACT/BOOKING.
 
-==================================================
-23. COMPONENT ARCHITECTURE
+================================================== 23. COMPONENT ARCHITECTURE
 ==================================================
 
 Build reusable components:
@@ -743,8 +745,7 @@ MobileActionBar
 
 Keep content/data separated from UI where practical so AutoHerb can update services, reviews, images and contact information later.
 
-==================================================
-24. FINAL QUALITY CHECK
+================================================== 24. FINAL QUALITY CHECK
 ==================================================
 
 Before considering the website complete:
@@ -752,6 +753,7 @@ Before considering the website complete:
 Check every section against the supplied reference images.
 
 Verify:
+
 - No RSR Interiors references
 - No incorrect brand names
 - No placeholder lorem ipsum

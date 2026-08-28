@@ -80,8 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "AutoHerb Ongole | Premium Car Detailing & Ceramic Coating" },
       {
         name: "description",
-        content:
-          "Premium car detailing, ceramic coating and PPF studio in Ongole, Andhra Pradesh.",
+        content: "Premium car detailing, ceramic coating and PPF studio in Ongole, Andhra Pradesh.",
       },
       { property: "og:site_name", content: "AutoHerb Ongole" },
       { property: "og:type", content: "website" },

@@ -95,7 +95,7 @@ export function InstallBanner() {
     <div
       role="dialog"
       aria-label="Install AutoHerb"
-      className="fixed inset-x-3 bottom-[calc(4.75rem+env(safe-area-inset-bottom))] z-[60] mx-auto max-w-md rounded-2xl border border-gold/40 bg-background/95 p-4 shadow-[var(--shadow-gold)] backdrop-blur-xl lg:inset-x-auto lg:right-6 lg:bottom-6"
+      className="fixed inset-x-3 bottom-[calc(4.75rem+env(safe-area-inset-bottom))] z-60 mx-auto max-w-md rounded-2xl border border-gold/40 bg-background/95 p-4 shadow-(--shadow-gold) backdrop-blur-xl lg:inset-x-auto lg:right-6 lg:bottom-6"
     >
       <button
         type="button"
@@ -141,7 +141,7 @@ export function InstallBanner() {
             type="button"
             onClick={install}
             disabled={busy}
-            className="h-11 flex-1 rounded-full bg-[image:var(--gradient-gold)] text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
+            className="h-11 flex-1 rounded-full bg-(image:--gradient-gold) text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
           >
             {busy ? "Installing…" : "Install"}
           </button>

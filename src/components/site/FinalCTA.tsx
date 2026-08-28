@@ -8,7 +8,7 @@ export function FinalCTA() {
     <section className="pb-20 sm:pb-24 lg:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="flex flex-col gap-6 rounded-2xl bg-[image:var(--gradient-gold)] p-6 text-primary-foreground sm:p-8 lg:flex-row lg:items-center lg:gap-10">
+          <div className="flex flex-col gap-6 rounded-2xl bg-(image:--gradient-gold) p-6 text-primary-foreground sm:p-8 lg:flex-row lg:items-center lg:gap-10">
             <Car className="hidden h-10 w-10 shrink-0 sm:block" strokeWidth={1.5} aria-hidden />
             <div className="min-w-0 flex-1">
               <h2 className="font-display text-xl font-bold leading-tight sm:text-2xl">

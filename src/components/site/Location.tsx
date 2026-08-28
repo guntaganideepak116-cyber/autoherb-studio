@@ -28,7 +28,7 @@ export function LocationSection() {
                   href={business.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-5 text-sm font-semibold text-primary-foreground"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-(image:--gradient-gold) px-5 text-sm font-semibold text-primary-foreground"
                 >
                   <Navigation className="h-4 w-4" aria-hidden />
                   Get Directions

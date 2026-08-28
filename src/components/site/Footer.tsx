@@ -12,13 +12,7 @@ const quickLinks = [
   { label: "Apply Jobs", href: "#jobs" },
 ];
 
-const serviceLinks = [
-  "Ceramic Coating",
-  "PPF",
-  "Full Car Spa",
-  "Foam Wash",
-  "Glass Treatment",
-];
+const serviceLinks = ["Ceramic Coating", "PPF", "Full Car Spa", "Foam Wash", "Glass Treatment"];
 
 export function Footer() {
   return (
@@ -84,7 +78,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Contact Us</h2>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+            Contact Us
+          </h2>
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li>
               <a

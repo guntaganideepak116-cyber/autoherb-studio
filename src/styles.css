@@ -74,7 +74,8 @@
   );
   --gradient-gold: linear-gradient(135deg, var(--gold-soft), var(--gold) 45%, var(--gold-deep));
   --shadow-card: 0 18px 40px -24px oklch(0 0 0 / 0.9);
-  --shadow-gold: 0 0 0 1px color-mix(in oklab, var(--gold) 45%, transparent),
+  --shadow-gold:
+    0 0 0 1px color-mix(in oklab, var(--gold) 45%, transparent),
     0 18px 45px -22px color-mix(in oklab, var(--gold) 45%, transparent);
 }
 

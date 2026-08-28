@@ -43,11 +43,13 @@ export function JobsSection() {
                       <span className="min-w-0">{job.department}</span>
                     </div>
                   </dl>
-                  <p className="mt-4 text-sm leading-relaxed text-foreground/85">{job.description}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/85">
+                    {job.description}
+                  </p>
                   <button
                     type="button"
                     onClick={() => openApply(job.title)}
-                    className="mt-6 inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-opacity hover:opacity-90"
+                    className="mt-6 inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-(image:--gradient-gold) px-5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-opacity hover:opacity-90"
                   >
                     Apply Now
                     <ArrowRight className="h-4 w-4" aria-hidden />

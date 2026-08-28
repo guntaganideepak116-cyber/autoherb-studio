@@ -28,7 +28,7 @@ export function MobileActionBar() {
           type="button"
           onClick={openBooking}
           aria-label="Open the booking form"
-          className="flex h-12 flex-col items-center justify-center rounded-lg bg-[image:var(--gradient-gold)] text-[0.65rem] font-semibold tracking-wide text-primary-foreground transition-opacity active:opacity-90"
+          className="flex h-12 flex-col items-center justify-center rounded-lg bg-(image:--gradient-gold) text-[0.65rem] font-semibold tracking-wide text-primary-foreground transition-opacity active:opacity-90"
         >
           <CalendarCheck className="h-4 w-4" aria-hidden />
           BOOK NOW

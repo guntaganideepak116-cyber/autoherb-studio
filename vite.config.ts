@@ -1,4 +1,4 @@
-﻿// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
+// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
 // or the app will break with duplicate plugins:
 //   - TanStack devtools (dev-only, first), tanstackStart, viteReact, tailwindcss, tsConfigPaths,
 //     nitro (build-only using cloudflare as a default target), VITE_* env injection, @ path alias,
@@ -19,6 +19,9 @@ export default defineConfig({
     preset: "vercel",
   },
   vite: {
+    resolve: {
+      tsconfigPaths: true,
+    },
     plugins: [
       VitePWA({
         strategies: "generateSW",
@@ -28,7 +31,7 @@ export default defineConfig({
         manifest: false,
         devOptions: { enabled: false },
         workbox: {
-          globPatterns: ["**/*.{js,css,png,jpg,svg,webp,woff2}"],
+          globPatterns: [],
           navigateFallbackDenylist: [/^\/~oauth/, /^\/api\//],
           runtimeCaching: [
             {

@@ -41,7 +41,7 @@ function ServiceCard({ service, onOpen }: { service: Service; onOpen: () => void
       aria-label={`View details for ${service.name}`}
       className="card-premium group flex h-full flex-col overflow-hidden rounded-xl text-left"
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="relative aspect-4/3 w-full overflow-hidden">
         <img
           src={service.image}
           alt={`${service.name} at AutoHerb Ongole`}
@@ -50,7 +50,7 @@ function ServiceCard({ service, onOpen }: { service: Service; onOpen: () => void
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/25 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-surface via-surface/25 to-transparent" />
         <span className="absolute left-3 top-3 grid h-8 w-8 place-items-center rounded-md border border-gold/40 bg-background/70 backdrop-blur">
           <Icon className="h-4 w-4 text-gold" aria-hidden />
         </span>
@@ -86,7 +86,7 @@ function ServiceDetail({ service, onClose }: { service: Service; onClose: () => 
       role="dialog"
       aria-modal="true"
       aria-label={service.name}
-      className="fixed inset-0 z-[70] flex items-end justify-center bg-background/80 p-0 backdrop-blur-sm sm:items-center sm:p-6"
+      className="fixed inset-0 z-70 flex items-end justify-center bg-background/80 p-0 backdrop-blur-sm sm:items-center sm:p-6"
       onClick={onClose}
     >
       <div
@@ -101,7 +101,7 @@ function ServiceDetail({ service, onClose }: { service: Service; onClose: () => 
             height={700}
             className="h-52 w-full object-cover sm:h-64"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-surface to-transparent" />
           <button
             type="button"
             onClick={onClose}
@@ -156,7 +156,7 @@ function ServiceDetail({ service, onClose }: { service: Service; onClose: () => 
               href={waLink(service.name)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] text-sm font-semibold text-primary-foreground"
+              className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-(image:--gradient-gold) text-sm font-semibold text-primary-foreground"
             >
               <MessageCircle className="h-4 w-4" aria-hidden />
               Book this service
@@ -183,11 +183,11 @@ export function ServicesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
           <div className="flex items-center justify-center gap-4">
-            <span className="hidden h-px w-16 bg-[image:var(--gold-line)] sm:block" />
+            <span className="hidden h-px w-16 bg-(image:--gold-line) sm:block" />
             <h2 className="font-display text-2xl font-bold uppercase tracking-[0.3em] sm:text-3xl">
               Our Services
             </h2>
-            <span className="hidden h-px w-16 bg-[image:var(--gold-line)] sm:block" />
+            <span className="hidden h-px w-16 bg-(image:--gold-line) sm:block" />
           </div>
           <p className="mt-3 text-sm text-muted-foreground">Precision care. Elevated protection.</p>
         </Reveal>

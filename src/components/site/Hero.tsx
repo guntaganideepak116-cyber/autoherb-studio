@@ -11,7 +11,7 @@ const highlights = [
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-16 lg:pt-[4.5rem]">
+    <section id="home" className="relative overflow-hidden pt-16 lg:pt-18">
       <div className="relative">
         <img
           src={heroCar}
@@ -21,10 +21,10 @@ export function Hero() {
           fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover object-[78%_center] contrast-[1.05] brightness-[1.15] sm:object-[72%_center] lg:object-[65%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent sm:via-background/62 lg:from-background lg:via-background/45 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/45" />
+        <div className="absolute inset-0 bg-linear-to-r from-background via-background/70 to-transparent sm:via-background/62 lg:from-background lg:via-background/45 lg:to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-background/45" />
 
-        <div className="relative mx-auto flex min-h-[38rem] max-w-7xl items-center px-4 py-16 sm:px-6 lg:min-h-[42rem] lg:px-8 lg:py-24">
+        <div className="relative mx-auto flex min-h-152 max-w-7xl items-center px-4 py-16 sm:px-6 lg:min-h-168 lg:px-8 lg:py-24">
           <div className="max-w-xl">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.45em] text-foreground/80">
               AutoHerb Ongole
@@ -54,7 +54,7 @@ export function Hero() {
                 href={waLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-6 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-(image:--gradient-gold) px-6 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden />
                 Book on WhatsApp

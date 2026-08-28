@@ -51,7 +51,7 @@ export function Header() {
           : "border-b border-transparent",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:h-18 lg:px-8">
         <a href="#home" className="shrink-0" aria-label="AutoHerb Ongole home">
           <Logo />
         </a>
@@ -73,7 +73,7 @@ export function Header() {
             href={waLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center gap-2 whitespace-nowrap rounded-full bg-[image:var(--gradient-gold)] px-5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            className="inline-flex h-11 items-center gap-2 whitespace-nowrap rounded-full bg-(image:--gradient-gold) px-5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             <MessageCircle className="h-4 w-4" aria-hidden />
             Book on WhatsApp
@@ -121,7 +121,7 @@ export function Header() {
               href={waLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-gold)] text-sm font-semibold text-primary-foreground"
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-(image:--gradient-gold) text-sm font-semibold text-primary-foreground"
             >
               <MessageCircle className="h-4 w-4" aria-hidden />
               Book on WhatsApp

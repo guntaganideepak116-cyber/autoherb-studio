@@ -1,5 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight, Users, Package, ShieldCheck, Star } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Users,
+  Package,
+  ShieldCheck,
+  Star,
+} from "lucide-react";
 import beforeImg from "@/assets/before.jpg";
 import afterImg from "@/assets/after.jpg";
 import { waLink } from "@/data/site";
@@ -32,7 +40,7 @@ function Slider() {
   return (
     <div
       ref={wrapRef}
-      className="relative aspect-[4/3] w-full touch-pan-y select-none overflow-hidden rounded-xl border border-border sm:aspect-[16/10]"
+      className="relative aspect-4/3 w-full touch-pan-y select-none overflow-hidden rounded-xl border border-border sm:aspect-16/10"
       onPointerDown={(e) => {
         dragging.current = true;
         setFromClientX(e.clientX);
@@ -63,7 +71,7 @@ function Slider() {
       <span className="absolute bottom-3 left-3 rounded-md bg-background/85 px-3 py-1 text-[0.7rem] font-semibold tracking-widest">
         BEFORE
       </span>
-      <span className="absolute bottom-3 right-3 rounded-md bg-[image:var(--gradient-gold)] px-3 py-1 text-[0.7rem] font-semibold tracking-widest text-primary-foreground">
+      <span className="absolute bottom-3 right-3 rounded-md bg-(image:--gradient-gold) px-3 py-1 text-[0.7rem] font-semibold tracking-widest text-primary-foreground">
         AFTER
       </span>
 
@@ -86,7 +94,7 @@ function Slider() {
         style={{ left: `${pos}%` }}
       >
         <ChevronLeft className="h-3.5 w-3.5" />
-        <ChevronRight className="absolute h-3.5 w-3.5 translate-x-[7px]" />
+        <ChevronRight className="absolute h-3.5 w-3.5 translate-x-1.75" />
       </span>
     </div>
   );
@@ -119,7 +127,7 @@ export function BeforeAfterSection() {
                   href={waLink("Full Spa")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex h-11 items-center gap-2 rounded-full bg-[image:var(--gradient-gold)] px-5 text-sm font-semibold text-primary-foreground"
+                  className="mt-5 inline-flex h-11 items-center gap-2 rounded-full bg-(image:--gradient-gold) px-5 text-sm font-semibold text-primary-foreground"
                 >
                   View More Work
                   <ArrowRight className="h-4 w-4" aria-hidden />

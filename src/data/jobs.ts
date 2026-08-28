@@ -19,8 +19,7 @@ export const jobs: Job[] = [
     type: "Full Time",
     experience: "0–2 Years",
     department: "Detailing",
-    description:
-      "Assist with professional vehicle cleaning, detailing and finishing services.",
+    description: "Assist with professional vehicle cleaning, detailing and finishing services.",
   },
   {
     id: "ppf-ceramic-technician",
@@ -38,7 +37,6 @@ export const jobs: Job[] = [
     type: "Full Time",
     experience: "0–2 Years",
     department: "Customer Support",
-    description:
-      "Assist customers with service enquiries, bookings and communication.",
+    description: "Assist customers with service enquiries, bookings and communication.",
   },
 ];

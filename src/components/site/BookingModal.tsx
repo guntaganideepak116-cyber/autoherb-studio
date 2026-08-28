@@ -18,7 +18,15 @@ type Values = {
   notes: string;
 };
 
-const empty: Values = { name: "", phone: "", vehicle: "", service: "", date: "", time: "", notes: "" };
+const empty: Values = {
+  name: "",
+  phone: "",
+  vehicle: "",
+  service: "",
+  date: "",
+  time: "",
+  notes: "",
+};
 
 function validate(v: Values) {
   const errors: Partial<Record<keyof Values, string>> = {};
@@ -85,8 +93,10 @@ export function BookingModal() {
 
   if (!open) return null;
 
-  const set = (k: keyof Values) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
-    setValues((v) => ({ ...v, [k]: e.target.value }));
+  const set =
+    (k: keyof Values) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+      setValues((v) => ({ ...v, [k]: e.target.value }));
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -111,7 +121,7 @@ export function BookingModal() {
     ) : null;
 
   return (
-    <div className="fixed inset-0 z-[70] flex items-end justify-center sm:items-center">
+    <div className="fixed inset-0 z-70 flex items-end justify-center sm:items-center">
       <div
         className="absolute inset-0 bg-black/75 backdrop-blur-sm"
         onClick={() => setOpen(false)}
@@ -121,7 +131,7 @@ export function BookingModal() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="booking-title"
-        className="relative max-h-[92dvh] w-full overflow-y-auto rounded-t-3xl border border-gold/25 bg-background/97 p-5 shadow-[var(--shadow-gold)] sm:max-w-lg sm:rounded-3xl sm:p-7"
+        className="relative max-h-[92dvh] w-full overflow-y-auto rounded-t-3xl border border-gold/25 bg-background/97 p-5 shadow-(--shadow-gold) sm:max-w-lg sm:rounded-3xl sm:p-7"
       >
         <button
           type="button"
@@ -141,34 +151,76 @@ export function BookingModal() {
 
         <form onSubmit={onSubmit} noValidate className="mt-6 space-y-4">
           <div>
-            <label htmlFor="bk-name" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+            <label
+              htmlFor="bk-name"
+              className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold"
+            >
               <User className="h-3.5 w-3.5" aria-hidden /> Name
             </label>
-            <input id="bk-name" className={fieldClass} value={values.name} onChange={set("name")} placeholder="Your full name" maxLength={60} autoComplete="name" />
+            <input
+              id="bk-name"
+              className={fieldClass}
+              value={values.name}
+              onChange={set("name")}
+              placeholder="Your full name"
+              maxLength={60}
+              autoComplete="name"
+            />
             {err("name")}
           </div>
 
           <div>
-            <label htmlFor="bk-phone" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+            <label
+              htmlFor="bk-phone"
+              className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold"
+            >
               <Phone className="h-3.5 w-3.5" aria-hidden /> Phone Number
             </label>
-            <input id="bk-phone" type="tel" inputMode="tel" className={fieldClass} value={values.phone} onChange={set("phone")} placeholder="10-digit mobile number" maxLength={16} autoComplete="tel" />
+            <input
+              id="bk-phone"
+              type="tel"
+              inputMode="tel"
+              className={fieldClass}
+              value={values.phone}
+              onChange={set("phone")}
+              placeholder="10-digit mobile number"
+              maxLength={16}
+              autoComplete="tel"
+            />
             {err("phone")}
           </div>
 
           <div>
-            <label htmlFor="bk-vehicle" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+            <label
+              htmlFor="bk-vehicle"
+              className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold"
+            >
               <Car className="h-3.5 w-3.5" aria-hidden /> Vehicle Type / Model
             </label>
-            <input id="bk-vehicle" className={fieldClass} value={values.vehicle} onChange={set("vehicle")} placeholder="e.g. Hyundai Creta" maxLength={60} />
+            <input
+              id="bk-vehicle"
+              className={fieldClass}
+              value={values.vehicle}
+              onChange={set("vehicle")}
+              placeholder="e.g. Hyundai Creta"
+              maxLength={60}
+            />
             {err("vehicle")}
           </div>
 
           <div>
-            <label htmlFor="bk-service" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+            <label
+              htmlFor="bk-service"
+              className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold"
+            >
               <Wrench className="h-3.5 w-3.5" aria-hidden /> Select Service
             </label>
-            <select id="bk-service" className={fieldClass} value={values.service} onChange={set("service")}>
+            <select
+              id="bk-service"
+              className={fieldClass}
+              value={values.service}
+              onChange={set("service")}
+            >
               <option value="">Choose a service</option>
               {services.map((s) => (
                 <option key={s.id} value={s.name}>
@@ -182,26 +234,56 @@ export function BookingModal() {
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label htmlFor="bk-date" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+              <label
+                htmlFor="bk-date"
+                className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold"
+              >
                 <CalendarDays className="h-3.5 w-3.5" aria-hidden /> Date
               </label>
-              <input id="bk-date" type="date" className={fieldClass} value={values.date} onChange={set("date")} min={new Date().toISOString().slice(0, 10)} />
+              <input
+                id="bk-date"
+                type="date"
+                className={fieldClass}
+                value={values.date}
+                onChange={set("date")}
+                min={new Date().toISOString().slice(0, 10)}
+              />
               {err("date")}
             </div>
             <div>
-              <label htmlFor="bk-time" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+              <label
+                htmlFor="bk-time"
+                className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold"
+              >
                 <Clock className="h-3.5 w-3.5" aria-hidden /> Time
               </label>
-              <input id="bk-time" type="time" className={fieldClass} value={values.time} onChange={set("time")} />
+              <input
+                id="bk-time"
+                type="time"
+                className={fieldClass}
+                value={values.time}
+                onChange={set("time")}
+              />
               {err("time")}
             </div>
           </div>
 
           <div>
-            <label htmlFor="bk-notes" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+            <label
+              htmlFor="bk-notes"
+              className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold"
+            >
               <MessageSquare className="h-3.5 w-3.5" aria-hidden /> Additional Notes (optional)
             </label>
-            <textarea id="bk-notes" rows={3} maxLength={500} className="w-full rounded-xl border border-border bg-surface/70 p-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-gold focus:outline-none" value={values.notes} onChange={set("notes")} placeholder="Anything we should know?" />
+            <textarea
+              id="bk-notes"
+              rows={3}
+              maxLength={500}
+              className="w-full rounded-xl border border-border bg-surface/70 p-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-gold focus:outline-none"
+              value={values.notes}
+              onChange={set("notes")}
+              placeholder="Anything we should know?"
+            />
             {err("notes")}
           </div>
 
@@ -216,7 +298,7 @@ export function BookingModal() {
             <button
               type="submit"
               disabled={submitting}
-              className="h-12 flex-[1.4] rounded-full bg-[image:var(--gradient-gold)] text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-70"
+              className="h-12 flex-[1.4] rounded-full bg-(image:--gradient-gold) text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-70"
             >
               {submitting ? "Opening WhatsApp…" : "Submit Booking"}
             </button>
